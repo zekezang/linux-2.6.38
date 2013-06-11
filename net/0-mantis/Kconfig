@@ -1,0 +1,14 @@
+#
+# mantis subsystem configuration
+#
+
+menuconfig MANTIS
+	tristate "mantis subsystem support"
+
+
+config AF_MANTIS
+		tristate "mantis protocol support"
+		depends on MANTIS
+		help
+		zekezang build........00
+

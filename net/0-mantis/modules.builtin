@@ -1,0 +1,2 @@
+kernel/net/0-mantis/af_mantis.ko
+kernel/net/0-mantis/mantis_sysfs.ko

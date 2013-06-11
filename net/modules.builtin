@@ -1,0 +1,15 @@
+kernel/net/0-mantis/af_mantis.ko
+kernel/net/0-mantis/mantis_sysfs.ko
+kernel/net/bluetooth/bluetooth.ko
+kernel/net/bluetooth/l2cap.ko
+kernel/net/bluetooth/sco.ko
+kernel/net/bluetooth/bnep/bnep.ko
+kernel/net/bluetooth/hidp/hidp.ko
+kernel/net/bluetooth/rfcomm/rfcomm.ko
+kernel/net/ipv4/tcp_cubic.ko
+kernel/net/mac80211/mac80211.ko
+kernel/net/packet/af_packet.ko
+kernel/net/sunrpc/sunrpc.ko
+kernel/net/unix/unix.ko
+kernel/net/wireless/cfg80211.ko
+kernel/net/wireless/lib80211.ko

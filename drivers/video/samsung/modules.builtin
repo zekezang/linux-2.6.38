@@ -1,0 +1,2 @@
+kernel/drivers/video/samsung/s3cfb.ko
+kernel/drivers/video/samsung/s3cfb_spi.ko

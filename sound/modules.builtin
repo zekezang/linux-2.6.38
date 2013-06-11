@@ -1,0 +1,13 @@
+kernel/sound/soundcore.ko
+kernel/sound/ac97_bus.ko
+kernel/sound/core/snd.ko
+kernel/sound/core/snd-timer.ko
+kernel/sound/core/snd-pcm.ko
+kernel/sound/core/snd-page-alloc.ko
+kernel/sound/core/oss/snd-mixer-oss.ko
+kernel/sound/core/oss/snd-pcm-oss.ko
+kernel/sound/soc/snd-soc-core.ko
+kernel/sound/soc/codecs/snd-soc-wm9713.ko
+kernel/sound/soc/samsung/snd-soc-s3c24xx.ko
+kernel/sound/soc/samsung/snd-soc-ac97.ko
+kernel/sound/soc/samsung/snd-soc-mini6410-wm9713.ko
