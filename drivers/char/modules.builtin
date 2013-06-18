@@ -1,3 +1,0 @@
-kernel/drivers/char/mini6410_leds.ko
-kernel/drivers/char/mini6410_buttons.ko
-kernel/drivers/char/mini6410_pwm.ko

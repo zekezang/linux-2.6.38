@@ -10,8 +10,6 @@
 
 MODULE_LICENSE("GPL");
 
-
-
 int adc_major = 250;
 int adc_minor = 0;
 int number_of_devices = 1;

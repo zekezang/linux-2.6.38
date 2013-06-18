@@ -28,6 +28,10 @@
 
 #include "../../video/samsung/s3c_mini6410.h"
 
+#if defined(CONFIG_FB_S3C_EXT_MINI6410)
+extern void mini210_get_lcd_res(int *w, int *h);
+#endif
+
 #if !defined(S3CFB_HRES) || !defined(S3CFB_VRES)
 #error "mini6410 frame buffer driver not configed"
 #endif
@@ -76,7 +80,17 @@ static struct miscdevice misc = {
 
 static int __init dev_init(void)
 {
+	int width = 0, height = 0;
 	int ret;
+
+#if defined(CONFIG_FB_S3C_EXT_MINI6410)
+	mini210_get_lcd_res(&width, &height);
+#endif
+
+	if (!width)
+		width = S3CFB_HRES;
+	if (!height)
+		height = S3CFB_VRES;
 
 	input_dev = input_allocate_device();
 	if (!input_dev) {
@@ -86,8 +100,8 @@ static int __init dev_init(void)
 	
 	input_dev->evbit[0] = input_dev->evbit[0] = BIT_MASK(EV_SYN) | BIT_MASK(EV_KEY) | BIT_MASK(EV_ABS);
 	input_dev->keybit[BIT_WORD(BTN_TOUCH)] = BIT_MASK(BTN_TOUCH);
-	input_set_abs_params(input_dev, ABS_X, 0, S3CFB_HRES, 0, 0);
-	input_set_abs_params(input_dev, ABS_Y, 0, S3CFB_VRES, 0, 0);
+	input_set_abs_params(input_dev, ABS_X, 0, width, 0, 0);
+	input_set_abs_params(input_dev, ABS_Y, 0, height, 0, 0);
 	input_set_abs_params(input_dev, ABS_PRESSURE, 0, 1, 0, 0);
 
 	input_dev->name = "TouchScreen Pipe";

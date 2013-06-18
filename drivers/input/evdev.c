@@ -623,6 +623,7 @@ static long evdev_do_ioctl(struct file *file, unsigned int cmd,
 	switch (cmd) {
 
 	case EVIOCGVERSION:
+//		printk("-----EV_VERSION in kernel---:%X\n",EV_VERSION);
 		return put_user(EV_VERSION, ip);
 
 	case EVIOCGID:
